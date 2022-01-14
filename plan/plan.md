@@ -20,7 +20,7 @@
 
     -fetch data from API
 
-### Search Bar
+### Search Bar 
 
     -Input
     -Submit button

@@ -1,8 +1,10 @@
+/** @format */
+
 import React from "react";
 import { useState, useEffect } from "react";
 
 function ApiTest({ location }) {
-  const [data, setData] = useState({});
+  const [apiData, setData] = useState({});
 
   async function fetchData(location) {
     const response = await fetch(
@@ -15,19 +17,23 @@ function ApiTest({ location }) {
       data.days[0].datetime,
       data.resolvedAddress,
     ]);
+   
   }
 
   useEffect(() => {
+
     fetchData(location);
+   // console.log(apiData[3]);
   }, [location]);
 
   return (
     <div>
       <h2>NO</h2>
-      <p>{data[0]}</p>
-      <p>{data[1]}°C</p>
-      <p>{data[2]}</p>
-      <p>{data[3]}</p>
+
+      <p>{apiData[0]}</p>
+      <p>{apiData[1]}°C</p>
+      <p>{apiData[2]}</p>
+      <p>{apiData[3]}</p>
     </div>
   );
 }

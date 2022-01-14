@@ -4,7 +4,7 @@ import Input from "./Components/Input";
 import React, { useState } from "react";
 
 function App() {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("London");
   
   function handleClick(location) {
     setLocation(location);
