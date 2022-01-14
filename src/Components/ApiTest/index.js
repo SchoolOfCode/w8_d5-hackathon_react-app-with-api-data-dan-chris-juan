@@ -16,14 +16,13 @@ function ApiTest({ location }) {
       data.days[0].temp,
       data.days[0].datetime,
       data.resolvedAddress,
+      data.days[0].icon,
     ]);
-   
   }
 
   useEffect(() => {
-
     fetchData(location);
-   // console.log(apiData[3]);
+    // console.log(apiData[3]);
   }, [location]);
 
   return (
