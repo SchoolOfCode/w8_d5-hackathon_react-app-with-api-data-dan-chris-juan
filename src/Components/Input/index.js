@@ -4,6 +4,7 @@ import { useState } from "react";
 function Input({ handleClick }) {
   const [text, setText] = useState("");
 
+  
   return (
     <div id="search">
       <input
