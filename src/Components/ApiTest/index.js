@@ -3,6 +3,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(
+  require.context("./icons", false, /\.(png|jpe?g|svg)$/)
+);
+
 function ApiTest({ location }) {
   const [apiData, setData] = useState({});
 
@@ -28,7 +40,7 @@ function ApiTest({ location }) {
   return (
     <div>
       <h2>NO</h2>
-
+      <img src={images[`${apiData[4]}.png`]} alt="Weather Picture" />
       <p>{apiData[0]}</p>
       <p>{apiData[1]}°C</p>
       <p>{apiData[2]}</p>
