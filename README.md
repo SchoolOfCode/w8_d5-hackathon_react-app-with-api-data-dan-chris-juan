@@ -1,4 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6701996&assignment_repo_type=AssignmentRepo)
+
 # React-athon
 
 For today's hackathon, we will be creating a web experience using data from an api.
@@ -16,6 +17,7 @@ Use Disney ideation to come up with an idea of what you want to build. Then deci
 Have the most simple version of your app (just enough features to be useable) working before lunch. Make regular commits as you build each component. Consider using React Router, useReducer, useEffect, etc.. if appropriate.
 
 ## Task 4 - Deployment
+
 Deploy your MVP on Netlify as soon as possible. Each time you push a new version of your app to Github, Netlify should automatically rebuild and deploy it. If your app uses environment variables, be sure to configure these on Netlify.
 
 ## Task 5 - Stretch Goals
