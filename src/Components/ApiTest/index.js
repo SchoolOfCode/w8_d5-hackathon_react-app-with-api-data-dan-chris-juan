@@ -42,6 +42,7 @@ function ApiTest({ location }) {
   return (
     <div>
       <div id="overview">
+        <hr />
         <h2>{apiData[5]}</h2>
         <img src={images[`${apiData[4]}.png`]} alt="Weather Picture" />
         <p>{apiData[0]}</p>

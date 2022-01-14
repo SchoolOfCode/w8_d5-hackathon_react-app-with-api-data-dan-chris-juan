@@ -7,6 +7,7 @@ function Input({ handleClick }) {
   return (
     <div id="search">
       <input
+        class="hvr-grow"
         placeholder="Search a location"
         type="text"
         onChange={(e) => {
@@ -14,6 +15,8 @@ function Input({ handleClick }) {
         }}
       ></input>
       <button
+        class="hvr-grow
+      }"
         onClick={() => {
           handleClick(text);
         }}
