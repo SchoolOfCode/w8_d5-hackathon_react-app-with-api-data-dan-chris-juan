@@ -34,3 +34,7 @@
 ## Hourly forcast or next day
 
 ### Tomorrow's forcast
+
+## Notes:
+
+- Answer to 'is it sunny' is based on returned icon string from API

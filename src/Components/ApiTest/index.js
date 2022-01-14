@@ -37,7 +37,12 @@ function ApiTest({ location }) {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=S2J5XERMPPNGC2NRCCYC5J3CH&contentType=json`
     );
     const data = await response.json();
-    setData(data);
+    setData([
+      data.description,
+      data.days[0].temp,
+      data.days[0].datetime,
+      data.resolvedAddress,
+    ]);
   }
 
   useEffect(() => {
@@ -46,8 +51,11 @@ function ApiTest({ location }) {
 
   return (
     <div>
-      <h1>HELLO</h1>
-      <p>{data.resolvedAddress}</p>
+      <h2>NO</h2>
+      <p>{data[0]}</p>
+      <p>{data[1]}°C</p>
+      <p>{data[2]}</p>
+      <p>{data[3]}</p>
     </div>
   );
 }
