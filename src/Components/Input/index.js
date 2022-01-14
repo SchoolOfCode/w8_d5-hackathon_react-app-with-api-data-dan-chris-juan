@@ -5,8 +5,9 @@ function Input({ handleClick }) {
   const [text, setText] = useState("");
 
   return (
-    <div>
+    <div id="search">
       <input
+        placeholder="Search a location"
         type="text"
         onChange={(e) => {
           setText(e.target.value);

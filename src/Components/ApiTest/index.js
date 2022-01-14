@@ -29,6 +29,8 @@ function ApiTest({ location }) {
       data.days[0].datetime,
       data.resolvedAddress,
       data.days[0].icon,
+      data.days[0].conditions,
+      data.days[0].hours[0].humidity,
     ]);
   }
 
@@ -39,10 +41,14 @@ function ApiTest({ location }) {
 
   return (
     <div>
-      <h2>NO</h2>
-      <img src={images[`${apiData[4]}.png`]} alt="Weather Picture" />
-      <p>{apiData[0]}</p>
+      <div id="overview">
+        <h2>{apiData[5]}</h2>
+        <img src={images[`${apiData[4]}.png`]} alt="Weather Picture" />
+        <p>{apiData[0]}</p>
+      </div>
+      <hr />
       <p>{apiData[1]}°C</p>
+      <p>{apiData[6]}% Humidity</p>
       <p>{apiData[2]}</p>
       <p>{apiData[3]}</p>
     </div>

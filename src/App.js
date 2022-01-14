@@ -11,7 +11,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Is it Sunny?</h1>
+      <h1 id="app-title">Is it Sunny?</h1>
       <h1>{location}</h1>
       <Input handleClick={handleClick} />
       <ApiTest location={location} />
