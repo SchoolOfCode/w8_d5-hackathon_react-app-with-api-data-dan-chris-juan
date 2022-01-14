@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { handleText } from "../App.js";
 
-function Input() {
+function Input({ handleClick }) {
   const [text, setText] = useState("");
 
   return (
@@ -15,7 +14,7 @@ function Input() {
       ></input>
       <button
         onClick={() => {
-          handleText({ text });
+          handleClick(text);
         }}
       >
         Submit
