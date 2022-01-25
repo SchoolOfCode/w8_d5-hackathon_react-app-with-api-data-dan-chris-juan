@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./hover.css";
+import ApiTest from "./Components/ApiTest";
+import Input from "./Components/Input";
+import React, { useState } from "react";
 
 function App() {
+  const [location, setLocation] = useState("London");
+
+  function handleClick(location) {
+    setLocation(location);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 id="app-title">Is it Sunny?</h1>
+      <h1>{location}</h1>
+      <Input handleClick={handleClick} />
+      <ApiTest location={location} />
     </div>
   );
 }
-
 export default App;
